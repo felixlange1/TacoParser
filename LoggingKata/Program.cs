@@ -76,7 +76,7 @@ namespace LoggingKata
 
                 // TODO: Once you have locB, create a new Coordinate object called `corB` with your locB's latitude and longitude.
                 
-                for (int j = 0; j < locations.Length; j++)
+                for (int j = i + 1; j < locations.Length; j++)
                 {
                     var locB = locations[j];
                     var corB = new GeoCoordinate(locB.Location.Latitude, locB.Location.Longitude);
@@ -84,9 +84,10 @@ namespace LoggingKata
                     // TODO: Now, still being inside the scope of the second for loop, compare the two locations using `.GetDistanceTo()` method, which returns a double.
                     // If the distance is greater than the currently saved distance, update the distance variable and the two `ITrackable` variables you set above.
                     
-                    if (corA.GetDistanceTo(corB) > distance)
+                    var currentDistance = corA.GetDistanceTo(corB);
+                    if (currentDistance > distance)
                     {
-                        distance = corA.GetDistanceTo(corB);
+                        distance = currentDistance;
                         location1 = locA;
                         location2 = locB;
                     }
@@ -114,10 +115,13 @@ namespace LoggingKata
 
             // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
             // Display these two Taco Bell locations to the console.
+            var distanceKM = distance / 1000;
+            var distanceMiles = distanceKM * 1.609344;
             
-            Console.WriteLine($"The two TacoBells furthest apart are: {location1.Name}, {location2.Name}");
-            Console.WriteLine($"Their coordinates are: {location1.Location.Latitude}, {location1.Location.Longitude}, {location2.Location.Latitude}, and {location2.Location.Longitude} {location2.Location.Latitude}");
-            Console.WriteLine($"The distance is: {distance} meters.");
+            logger.LogInfo("Analyzing complete.");
+            logger.LogInfo($"The two TacoBells furthest apart are: {location1.Name}, {location2.Name}");
+            logger.LogInfo($"Their coordinates are: {location1.Location.Latitude}, {location1.Location.Longitude}, {location2.Location.Latitude}, and {location2.Location.Longitude} {location2.Location.Latitude}");
+            logger.LogInfo($"The distance is: {distanceKM} kilometers or {distanceMiles} miles.");
 
         }
     }
