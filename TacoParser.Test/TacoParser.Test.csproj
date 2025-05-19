@@ -16,5 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LoggingKata\LoggingKata.csproj" />
+    <ProjectReference Include="..\TacoParser\TacoParser.csproj" />
   </ItemGroup>
 </Project>

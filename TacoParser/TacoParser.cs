@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LoggingKata
+namespace TacoParser
 {
 
     /// Parses a POI file to locate all the Taco Bells

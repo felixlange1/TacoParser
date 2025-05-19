@@ -1,4 +1,4 @@
-# Taco Bell Distance Finder 🌮📍  
+# Taco Parser 🌮📍  
 
 A C# console application that parses a CSV file of Taco Bell locations and calculates the two locations that are geographically the furthest apart.
 

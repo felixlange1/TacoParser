@@ -3,7 +3,7 @@ using System.Linq;
 using System.IO;
 using GeoCoordinatePortable;
 
-namespace LoggingKata
+namespace TacoParser
 {
     class Program
     {

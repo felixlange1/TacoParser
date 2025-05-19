@@ -1,4 +1,4 @@
-﻿namespace LoggingKata
+﻿namespace TacoParser
 {
     public interface ITrackable
     {

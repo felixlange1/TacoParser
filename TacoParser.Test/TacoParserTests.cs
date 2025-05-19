@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using Xunit;
 
-namespace LoggingKata.Test
+namespace TacoParser.Test
 {
     public class TacoParserTests
     {

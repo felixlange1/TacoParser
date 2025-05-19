@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LoggingKata
+namespace TacoParser
 {
     public class TacoLogger : ILog
     {
