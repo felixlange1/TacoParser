@@ -46,7 +46,7 @@ Each line contains:
 
 ## 📦 Project Structure
 
-LoggingKata/
+TacoParser/
 ├── Program.cs # Main application logic
 ├── TacoParser.cs # Parses CSV lines into TacoBell objects
 ├── TacoBell.cs # Implements ITrackable
@@ -99,7 +99,7 @@ dotnet run
 ### Run Tests
 
 ```bash
-cd LoggingKata.Test
+cd TacoParser.Test
 dotnet test
 ```
 
