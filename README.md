@@ -109,3 +109,8 @@ dotnet test
 Their coordinates are: 34.730369, -86.586104, 30.695366, -88.039894
 The distance is: 301.54 kilometers or 187.34 miles.
 ```
+
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE), originally provided by [TrueCoders](https://truecoders.io).
