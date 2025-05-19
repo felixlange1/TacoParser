@@ -74,7 +74,7 @@ public void ShouldParseLongitude(string line, double expected)
     var parser = new TacoParser();
     var result = parser.Parse(line);
     Assert.Equal(expected, result.Location.Longitude);
-}
+}```
 
 
 ---
@@ -90,7 +90,7 @@ public void ShouldParseLongitude(string line, double expected)
 ```bash
 git clone https://github.com/your-username/TacoParser.git
 cd TacoParser
-dotnet run
+dotnet run```
 
 ---
 
@@ -98,10 +98,10 @@ dotnet run
 
 ```bash
 cd LoggingKata.Test
-dotnet test
+dotnet test```
 
 ## 📋 Output Example
 
-The two TacoBells furthest apart are: Taco Bell Huntsville, Taco Bell Mobile
+```The two TacoBells furthest apart are: Taco Bell Huntsville, Taco Bell Mobile
 Their coordinates are: 34.730369, -86.586104, 30.695366, -88.039894
-The distance is: 301.54 kilometers or 187.34 miles.
+The distance is: 301.54 kilometers or 187.34 miles.```
