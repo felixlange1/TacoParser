@@ -2,9 +2,8 @@
 
 namespace LoggingKata
 {
-    /// <summary>
+
     /// Parses a POI file to locate all the Taco Bells
-    /// </summary>
     public class TacoParser
     {
         readonly ILog logger = new TacoLogger();
@@ -13,53 +12,43 @@ namespace LoggingKata
         {
             logger.LogInfo("Begin parsing");
 
-            // Take your line and use line.Split(',') to split it up into an array of strings, separated by the char ','
+            // Splits into an array of strings:
             var cells = line.Split(',');
 
-            // If your array's Length is less than 3, something went wrong
+            // Checks if array's Length is less than 3:
             if (cells.Length < 3)
             {
-                // Log error message and return null
+                // Logs error message and return null
                 logger.LogError("file was incomplete", null);
                 return null; 
             }
-
-            // TODO: Grab the latitude from your array at index 0
-            // You're going to need to parse your string as a `double`
-            // which is similar to parsing a string as an `int`
+            
+            // Grabs latitude from array:
             var latitude = double.Parse(cells[0]);
             
             
-            // TODO: Grab the longitude from your array at index 1
-            // You're going to need to parse your string as a `double`
-            // which is similar to parsing a string as an `int`
+            // Grabs longitude from array:
             var longitude = double.Parse(cells[1]);
             
             
-            // TODO: Grab the name from your array at index 2
+            // Grabs name from array:
             var name = cells[2];
             
-
-            // TODO: Create a TacoBell class
-            // that conforms to ITrackable
             
-            // TODO: Create an instance of the Point Struct
             logger.LogInfo($"Setting location - Latitude: {latitude}, Longitude: {longitude}");
             var point = new Point();
-            // TODO: Set the values of the point correctly (Latitude and Longitude) 
+            
             point.Latitude = latitude;
             point.Longitude = longitude;
 
-            // TODO: Create an instance of the TacoBell class
+            
             logger.LogInfo($"Finding TacoBell...");
             var tacoBell = new TacoBell();
             
-            // TODO: Set the values of the class correctly (Name and Location)
             tacoBell.Name = name;
             tacoBell.Location = point;
 
-            // TODO: Then, return the instance of your TacoBell class,
-            // since it conforms to ITrackable
+
             return tacoBell;
 
             
